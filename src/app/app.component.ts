@@ -292,8 +292,8 @@ export class AppComponent {
         tap((_) => {
           this.showList = true;
         }),
-        switchMap((changedValue) => {
-          return this.searchRequest(changedValue);
+        switchMap((value) => {
+          return this.searchRequest(value);
         })
       )
       .subscribe((result: any) => {
