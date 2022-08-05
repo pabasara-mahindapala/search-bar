@@ -311,7 +311,6 @@ export class AppComponent {
 
   handleSelected(value: any) {
     if (value) {
-      this.searchInput.nativeElement.blur();
       this.searchInput.nativeElement.value = value;
       this.initialDisplay = this.searchInput.nativeElement.value;
       this.showList = false;
