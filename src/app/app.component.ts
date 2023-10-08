@@ -298,10 +298,12 @@ export class AppComponent {
       )
       .subscribe((result: any) => {
         this.resultList = result;
+        console.log('Found ' + this.resultList.length + ' results');
       });
   }
 
   searchRequest(changedValue: string): any {
+    console.log("Sending request for '" + changedValue + "'");
     return of(
       this.countryList.filter((x) =>
         x.toLowerCase().includes(changedValue.toLowerCase())
